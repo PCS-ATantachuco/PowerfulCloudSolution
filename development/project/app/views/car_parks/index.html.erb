@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Car Parks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Price</th>
+      <th>Url image</th>
+      <th>Description</th>
+      <th>State</th>
+      <th>Started at</th>
+      <th>Ended at</th>
+      <th>Started time</th>
+      <th>Ended time</th>
+      <th>User</th>
+      <th>District</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @car_parks.each do |car_park| %>
+      <tr>
+        <td><%= car_park.address %></td>
+        <td><%= car_park.price %></td>
+        <td><%= car_park.url_image %></td>
+        <td><%= car_park.description %></td>
+        <td><%= car_park.state %></td>
+        <td><%= car_park.started_at %></td>
+        <td><%= car_park.ended_at %></td>
+        <td><%= car_park.started_time %></td>
+        <td><%= car_park.ended_time %></td>
+        <td><%= car_park.user %></td>
+        <td><%= car_park.district %></td>
+        <td><%= link_to 'Show', car_park %></td>
+        <td><%= link_to 'Edit', edit_car_park_path(car_park) %></td>
+        <td><%= link_to 'Destroy', car_park, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car park', new_car_park_path %>

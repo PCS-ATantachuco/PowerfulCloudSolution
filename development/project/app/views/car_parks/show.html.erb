@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @car_park.address %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @car_park.price %>
+</p>
+
+<p>
+  <strong>Url image:</strong>
+  <%= @car_park.url_image %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @car_park.description %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @car_park.state %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @car_park.started_at %>
+</p>
+
+<p>
+  <strong>Ended at:</strong>
+  <%= @car_park.ended_at %>
+</p>
+
+<p>
+  <strong>Started time:</strong>
+  <%= @car_park.started_time %>
+</p>
+
+<p>
+  <strong>Ended time:</strong>
+  <%= @car_park.ended_time %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @car_park.user %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @car_park.district %>
+</p>
+
+<%= link_to 'Edit', edit_car_park_path(@car_park) %> |
+<%= link_to 'Back', car_parks_path %>

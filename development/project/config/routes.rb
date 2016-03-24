@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :reservations
+  resources :car_parks
+  resources :favorites
+  resources :users
+  resources :districts
 #  get 'home/index'
  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
