@@ -45,11 +45,14 @@ group :development do
   gem 'spring'
 end
 
+#devise
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 #bootstrap
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
-
+gem 'less-rails-fontawesome'
 #Form management gem set
 gem 'simple_form'
 

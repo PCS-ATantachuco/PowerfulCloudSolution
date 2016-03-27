@@ -1,61 +1,18 @@
-<%= form_for(@car_park) do |f| %>
-  <% if @car_park.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@car_park.errors.count, "error") %> prohibited this car_park from being saved:</h2>
+<%= simple_form_for @car_park, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :address %>
+  <%= f.input :price %>
+  <%= f.input :url_image %>
+  <%= f.input :description %>
+  <%= f.input :state %>
+  <%= f.input :started_at %>
+  <%= f.input :ended_at %>
+  <%= f.input :started_time %>
+  <%= f.input :ended_time %>
+  <%= f.input :user_id %>
+  <%= f.input :district_id %>
 
-      <ul>
-      <% @car_park.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :url_image %><br>
-    <%= f.text_field :url_image %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.check_box :state %>
-  </div>
-  <div class="field">
-    <%= f.label :started_at %><br>
-    <%= f.date_select :started_at %>
-  </div>
-  <div class="field">
-    <%= f.label :ended_at %><br>
-    <%= f.date_select :ended_at %>
-  </div>
-  <div class="field">
-    <%= f.label :started_time %><br>
-    <%= f.time_select :started_time %>
-  </div>
-  <div class="field">
-    <%= f.label :ended_time %><br>
-    <%= f.time_select :ended_time %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :district_id %><br>
-    <%= f.text_field :district_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                car_parks_path, :class => 'btn btn-default' %>
 <% end %>
