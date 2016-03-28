@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :reservations
   resources :car_parks
   resources :favorites
-  resources :users
   resources :districts
 #  get 'home/index'
  root 'home#index'

@@ -1,0 +1,21 @@
+/*Home*/
+.home-img-parque{
+    width: 100%;
+    max-height: 500px;
+    min-height: 300px;
+}
+
+.home-detalle{
+    margin-top:40px;
+}
+
+.home-footer {
+    background-color: #272727;
+    bottom: 0;
+    color: #aaa;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    width: 100%;
+    min-height: 50px;
+}
