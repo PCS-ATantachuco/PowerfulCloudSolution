@@ -1,6 +1,7 @@
 class FavoritesController < ApplicationController
   before_action :set_favorite, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  layout "admin"
   # GET /favorites
   # GET /favorites.json
   def index
