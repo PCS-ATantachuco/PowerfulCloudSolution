@@ -1,3 +1,35 @@
+/*Login*/
+.login{
+   margin-left: 20%;
+   margin-right: 20%;
+}
+.navbar-default{
+    background-color: #3A3838;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #8E8989;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+.navbar-default a{
+    color: #FFFFFF;
+}
+.home-footer p{
+    color: #FFFFFF;
+}
+.home-footer{
+    margin-top: 30px;
+}
 /*Home*/
 .home-img-parque{
     width: 100%;
@@ -21,86 +53,3 @@
 }
 
 #admin
-
-body{
-    color:#707070;
-}
-
-ul.navbar-nav{
- min-height: 1000px !important;
-}
-
-.modal{
-    background-color: #ffffff;
-    padding: 20px;
-}
-
-.space{
-    padding-left:5px;
-}
-
-.title-content{
-    border-bottom: 1px solid #A4A4A4;
-}
-
-.form-group{
-    margin-right: 2px !important;
-    margin-left: 2px !important;
-}
-
-.modal{
-    background-color: #E7E7E4;
-    margin:50px;
-    /*width: 80%;*/
-}
-
-.hidden{
-    display:none;
-}
-
-#content-admin{
-    padding-top:20px!important;
-}
-
-.navbar-inverse{
- background: #ffd777;
- border-bottom: 1px solid #c9aa5f 
-}
-
-.side-nav{
-    background-color:#555C6D;
-}
-
-.navbar-inverse .navbar-brand {
-    color: #303030;
-    font-size:16px;
-    
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #C7C7C7;
-}
-
-@media (min-width: 768px){
-
-.side-nav {
-    border-right: 1px solid #333741;
-    }
-}
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
-    color: #ffffff;
-    background-color: #D17A5C
-}
-
-.information
-{font-size:13px;
-    
-}
-
-@media(max-width:767px) {
-    #page-wrapper {
-        margin-top: 100px !important;
-    }
-
-}
