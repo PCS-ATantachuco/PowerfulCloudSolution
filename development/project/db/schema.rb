@@ -57,18 +57,20 @@ ActiveRecord::Schema.define(version: 20160331054819) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.string   "code",         limit: 255
+    t.string   "code",                limit: 255
     t.date     "started_at"
     t.date     "ended_at"
     t.time     "started_time"
     t.time     "ended_time"
-    t.integer  "user_id",      limit: 4
-    t.integer  "car_park_id",  limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id",             limit: 4
+    t.integer  "car_park_id",         limit: 4
+    t.integer  "reservation_type_id", limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "reservations", ["car_park_id"], name: "index_reservations_on_car_park_id", using: :btree
+  add_index "reservations", ["reservation_type_id"], name: "index_reservations_on_reservation_type_id", using: :btree
   add_index "reservations", ["user_id"], name: "index_reservations_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
@@ -94,5 +96,6 @@ ActiveRecord::Schema.define(version: 20160331054819) do
   add_foreign_key "favorites", "districts"
   add_foreign_key "favorites", "users"
   add_foreign_key "reservations", "car_parks"
+  add_foreign_key "reservations", "reservation_types"
   add_foreign_key "reservations", "users"
 end
