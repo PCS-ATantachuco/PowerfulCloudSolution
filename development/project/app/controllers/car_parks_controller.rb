@@ -1,7 +1,7 @@
 class CarParksController < ApplicationController
   before_action :set_car_park, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  layout "admin"
+  layout "home"
   # GET /car_parks
   # GET /car_parks.json
   def index
