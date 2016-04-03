@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search_parking/index'
+
   get 'welcome/index'
 
   resources :reservation_types

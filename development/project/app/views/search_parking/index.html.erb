@@ -1,0 +1,69 @@
+<div class="main-container">
+    
+        <div class="col-fila-1 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h1 class="page-header">Search Parking</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="district">District</label>
+                        <input class="string optional form-control" type="text" name="district" id="district">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="address">Address</label>
+                        <input class="string optional form-control" type="text" name="address" id="address">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="started_at">Started at</label>
+                        <input class="string optional form-control" type="text" name="started_at" id="started_at">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="ended_at">Ended at</label>
+                        <input class="string optional form-control" type="text" name="ended_at" id="ended_at">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="started_time">Started time</label>
+                        <input class="string optional form-control" type="text" name="started_time" id="started_time">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="ended_time">Ended time</label>
+                        <input class="string optional form-control" type="text" name="ended_time" id="ended_time">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group string optional">
+                        <label class="string optional control-label" for="reservation_type">Reservation Type</label>
+                        <select id="reservation_type" name="reservation_type" class="optional form-control">
+                            <% @reservatio_types.each do |rts| %>
+                                <option value="<%=rts.id%>"><%= rts.name %></optio>
+                            <% end %>
+                            <option value="00">00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <input type="button" name="seach" value="Search" class="btn btn-default btn-primary">
+                    <input type="button" name="add_of_favorite" value="Add Of Favorite" class="btn btn-default btn-primary">
+                </div>
+            </div>
+            <div class="resultado-buqueda">
+                resultado despues de una busqueda
+            </div>
+        </div>
+        
+        <div class="col-fila-2 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <%=  image_tag "mapa.jpg", :class =>'mapa-reserva img-responsive' %>
+        </div>
+    
+ </div>
