@@ -2,6 +2,14 @@
   <%= f.error_notification %>
   <div class="row">
     <div class="col-lg-6">
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      
+      <%= f.association :district, :include_blank => true %>
+      <!--<%= f.input :district_id %>-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
       <%= f.input :address %>
     </div>
     <div class="col-lg-6">
@@ -13,19 +21,23 @@
     <div class="col-lg-6">
       <%= f.input :description %>
     </div>
+    <div class="col-lg-6">
+      <%= f.input :started_at %>
+    </div>
+    <div class="col-lg-6">
+      <%= f.input :ended_at %>
+    </div>
+    <div class="col-lg-6">
+      <%= f.input :started_time %>
+    </div>
+    <div class="col-lg-6">
+      <%= f.input :ended_time %>
+    </div>
+    <div class="col-lg-6">
+      <%= f.input :state %>
+    </div>
   </div>
-  
-  
-  
-  
-  
-  <%= f.input :state %>
-  <%= f.input :started_at %>
-  <%= f.input :ended_at %>
-  <%= f.input :started_time %>
-  <%= f.input :ended_time %>
-  <%= f.input :user_id %>
-  <%= f.input :district_id %>
+
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

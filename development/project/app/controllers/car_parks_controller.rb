@@ -29,8 +29,9 @@ class CarParksController < ApplicationController
 
     respond_to do |format|
       if @car_park.save
-        format.html { redirect_to @car_park, notice: 'Car park was successfully created.' }
-        format.json { render :show, status: :created, location: @car_park }
+        #@car_park
+        format.html { redirect_to "/car_parks/new", notice: 'Car park was successfully created.' }
+        #format.json { render :show, status: :created, location: @car_park }
       else
         format.html { render :new }
         format.json { render json: @car_park.errors, status: :unprocessable_entity }
