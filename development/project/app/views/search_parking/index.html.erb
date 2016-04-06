@@ -6,7 +6,13 @@
                 <div class="col-lg-6">
                     <div class="form-group string optional">
                         <label class="string optional control-label" for="district">District</label>
-                        <input class="string optional form-control" type="text" name="district" id="district">
+                        <select id="district" name="district" class="optional form-control">
+                            <% @districts.each do |rts| %>
+                                <option value="<%=rts.id%>"><%= rts.name %></optio>
+                            <% end %>
+                            <option value="00">00</option>
+                        </select>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -43,7 +49,7 @@
                     <div class="form-group string optional">
                         <label class="string optional control-label" for="reservation_type">Reservation Type</label>
                         <select id="reservation_type" name="reservation_type" class="optional form-control">
-                            <% @reservatio_types.each do |rts| %>
+                            <% @reservation_types.each do |rts| %>
                                 <option value="<%=rts.id%>"><%= rts.name %></optio>
                             <% end %>
                             <option value="00">00</option>

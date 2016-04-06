@@ -71,6 +71,6 @@ class CarParksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_park_params
-      params.require(:car_park).permit(:address, :price, :url_image, :description, :state, :started_at, :ended_at, :started_time, :ended_time, :user_id, :district_id)
+      params.require(:car_park).permit(:address, :price, :url_image, :description, :state, :started_at, :ended_at, :started_time, :ended_time, :user_id, :district_id, :reservation_type_id)
     end
 end

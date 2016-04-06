@@ -12,6 +12,7 @@ class CreateCarParks < ActiveRecord::Migration
       t.time :ended_time
       t.references :user, index: true, foreign_key: true
       t.references :district, index: true, foreign_key: true
+      t.references :reservation_type, index: true, foreign_key: true
 
       t.timestamps null: false
     end

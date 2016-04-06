@@ -3,6 +3,7 @@ class SearchParkingController < ApplicationController
   layout "home"
   def index
     
-    @reservatio_types = ReservationType.all
+    @reservation_types = ReservationType.all
+    @districts = District.all
   end
 end
