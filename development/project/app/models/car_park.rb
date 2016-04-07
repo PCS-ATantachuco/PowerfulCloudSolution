@@ -1,6 +1,7 @@
 class CarPark < ActiveRecord::Base
   belongs_to :user
   belongs_to :district
+  belongs_to :reservation_type
   has_many :reservations
   
   #validacion
@@ -12,4 +13,5 @@ class CarPark < ActiveRecord::Base
   validates :ended_at ,presence: true
   validates :started_time ,presence: true
   validates :ended_time ,presence: true
+  validates :reservation_type ,presence: true
 end

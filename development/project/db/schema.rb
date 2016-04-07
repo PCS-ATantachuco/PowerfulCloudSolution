@@ -14,22 +14,24 @@
 ActiveRecord::Schema.define(version: 20160331054819) do
 
   create_table "car_parks", force: :cascade do |t|
-    t.string   "address",      limit: 255
-    t.float    "price",        limit: 24
-    t.string   "url_image",    limit: 255
-    t.string   "description",  limit: 255
+    t.string   "address",             limit: 255
+    t.float    "price",               limit: 24
+    t.string   "url_image",           limit: 255
+    t.string   "description",         limit: 255
     t.boolean  "state"
     t.date     "started_at"
     t.date     "ended_at"
     t.time     "started_time"
     t.time     "ended_time"
-    t.integer  "user_id",      limit: 4
-    t.integer  "district_id",  limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id",             limit: 4
+    t.integer  "district_id",         limit: 4
+    t.integer  "reservation_type_id", limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "car_parks", ["district_id"], name: "index_car_parks_on_district_id", using: :btree
+  add_index "car_parks", ["reservation_type_id"], name: "index_car_parks_on_reservation_type_id", using: :btree
   add_index "car_parks", ["user_id"], name: "index_car_parks_on_user_id", using: :btree
 
   create_table "districts", force: :cascade do |t|
@@ -92,6 +94,7 @@ ActiveRecord::Schema.define(version: 20160331054819) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "car_parks", "districts"
+  add_foreign_key "car_parks", "reservation_types"
   add_foreign_key "car_parks", "users"
   add_foreign_key "favorites", "districts"
   add_foreign_key "favorites", "users"
