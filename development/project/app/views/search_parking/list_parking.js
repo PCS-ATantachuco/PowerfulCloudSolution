@@ -1,0 +1,1 @@
+$("#resultado_buqueda").html("<%= escape_javascript(render 'search_parking/list_car_parck') %>");

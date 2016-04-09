@@ -7,7 +7,7 @@ class SearchParkingController < ApplicationController
     @districts = District.all
   end
   
-  def search_park
+  def list_car
     @car_parks = CarPark.all
   end
   
