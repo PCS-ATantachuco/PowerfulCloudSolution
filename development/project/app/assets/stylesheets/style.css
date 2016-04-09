@@ -102,7 +102,59 @@ a:visited {
 
 /*Resultado de una busqueda*/
 .resultado-buqueda{
-    border: 1px solid #cccccc;
+    border: 4px solid #cccccc;
     min-height: 200px;
+    max-height: 400px;
+    overflow: auto;
     margin-top: 10px;
+}
+
+
+/*Reservas*/
+.cark_imagen{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.cark-distrito{
+    font-size: 20px;
+    padding-bottom: 0px;
+}
+
+.cark-direccion{
+    font-size: 12px;
+}
+
+.cark_fila{
+    border-bottom: 1px solid #cccccc;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cark-precio{
+    font-size: 25px;
+}
+
+.columna-uno{
+   border-right: 1px solid #cccccc;
+}
+
+.error{
+    color: red;
+    font-size: 13px;
+}
+
+#modal-window{
+    width: 573px;
+    margin: auto;
+    max-height: 292px;
+    background-color:#ffffff;
+    border-radius: 6px;
+}
+
+
+/*admin*/
+#page-wrapper-admin{
+    margin-top: 20px;
 }

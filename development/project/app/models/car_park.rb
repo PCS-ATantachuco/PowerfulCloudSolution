@@ -14,4 +14,5 @@ class CarPark < ActiveRecord::Base
   validates :started_time ,presence: true
   validates :ended_time ,presence: true
   validates :reservation_type ,presence: true
+  validates :state ,presence: true
 end

@@ -55,5 +55,9 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails-fontawesome'
 #Form management gem set
 gem 'simple_form'
+#modal_content
+gem 'bootstrap-datepicker-rails'
+#bootstrap modal
+gem 'bootstrap-modal-rails'
 
 

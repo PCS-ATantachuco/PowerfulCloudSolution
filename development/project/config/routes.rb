@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
   
-  get "search_parking/list_car_parck/:district" => 'search_parking#list_car_parck', :as => :list_car_parck
+  get "search_parking/list_favorite/:user" => 'search_parking#list_favorite', :as => :list_favorite
   
+  resources :search_parking do
+    collection do
+      get 'list_park'
+    end
+  end
+  
+  resources :search_parking do
+    collection do
+      post 'reserve'
+    end
+  end
+
   get 'search_parking/index'
 
   get 'welcome/index'
