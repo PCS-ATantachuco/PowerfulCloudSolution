@@ -7,7 +7,7 @@ class CarParksController < ApplicationController
   def index
     @car_parks = CarPark.all
   end
-
+  
   # GET /car_parks/1
   # GET /car_parks/1.json
   def show

@@ -6,4 +6,9 @@ class SearchParkingController < ApplicationController
     @reservation_types = ReservationType.all
     @districts = District.all
   end
+  
+  def search_park
+    @car_parks = CarPark.all
+  end
+  
 end

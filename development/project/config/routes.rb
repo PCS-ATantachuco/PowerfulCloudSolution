@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get "search_parking/list_car_parck/:district" => 'search_parking#list_car_parck', :as => :list_car_parcks
+  
   get 'search_parking/index'
 
   get 'welcome/index'
