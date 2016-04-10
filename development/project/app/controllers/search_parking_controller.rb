@@ -64,14 +64,14 @@ class SearchParkingController < ApplicationController
     @reservation.started_time= @car_park.started_time
     @reservation.ended_time= @car_park.ended_time
     @reservation.reservation_type_id= @car_park.reservation_type_id
+    @reservation.save
     
     #actualizamos el estado de car_park
-    CarPark.where( id: params[:id] ).update_all( state: 0 )
+    CarPark.where( id: params[:id] ).update_all(state:0)
     
     #INSERTAMOS FAVORITOS
-    @reservation = Reservation.new
-    
-    @favorite = Favorite.find_by(district_id: @car_park.district.id);
+    #preguntamos si ya existe favorito para el usuario logueado, si existe ya no guandamos
+    @favorite = Favorite.where(district_id: @car_park.district.id,user_id: current_user.id);
       
     if @favorite
     else
@@ -85,7 +85,7 @@ class SearchParkingController < ApplicationController
     #RESPUESTA
     @code_respuesta = params[:id];
     
-    @reservation.save
+    
     
     respond_to do |format|
       format.html

@@ -1,7 +1,7 @@
 class DistrictsController < ApplicationController
   before_action :set_district, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  layout "admin"
+  layout "home"
   # GET /districts
   # GET /districts.json
   def index

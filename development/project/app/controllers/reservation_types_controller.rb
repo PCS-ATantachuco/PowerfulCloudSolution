@@ -1,7 +1,7 @@
 class ReservationTypesController < ApplicationController
   before_action :set_reservation_type, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  layout "admin"
+  layout "home"
   # GET /reservation_types
   # GET /reservation_types.json
   def index

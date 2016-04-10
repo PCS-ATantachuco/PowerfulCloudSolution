@@ -5,8 +5,6 @@ class CarParksController < ApplicationController
   
   layout "home"
   
-      
-  
   # GET /car_parks
   # GET /car_parks.json
   def index
