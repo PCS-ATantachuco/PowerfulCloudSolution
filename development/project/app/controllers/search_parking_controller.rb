@@ -50,7 +50,7 @@ class SearchParkingController < ApplicationController
   end
   
   def reserve
-    #Obtenemos datos del parque
+    #Obtenemos datos del parqueo
     @car_park = CarPark.find_by(id: params[:id])
     
     

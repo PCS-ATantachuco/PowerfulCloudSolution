@@ -45,6 +45,8 @@ group :development do
   gem 'spring'
 end
 
+
+#GEMAW USADOS EN MI PROYECTO
 #devise
 gem 'devise', '~> 3.5', '>= 3.5.6'
 
@@ -55,7 +57,7 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails-fontawesome'
 #Form management gem set
 gem 'simple_form'
-#modal_content
+#calendario datepicker
 gem 'bootstrap-datepicker-rails'
 #bootstrap modal
 gem 'bootstrap-modal-rails'
